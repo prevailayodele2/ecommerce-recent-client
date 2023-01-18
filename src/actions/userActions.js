@@ -56,7 +56,7 @@ export const register = (name, email, password) => async(dispatch) => {
             }
         }
 
-        const {data} = await axios.post('/api/users', {name, email, password}, config)
+        const {data} = await axios.post('https://east-api-clothing.onrender.com/api/users', {name, email, password}, config)
         dispatch({
             type: USER_REGISTER_SUCCESS,
             payload: data
